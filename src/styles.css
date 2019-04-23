@@ -41,3 +41,21 @@ li {
 img {
     width: 622px;
 }
+
+label {
+    display: block;
+    font-size: 1.2em;
+
+}
+
+input {
+    margin-bottom: 15px;
+    height: 20px;
+    width: 200px;
+}
+
+button {
+    display: block;
+    font-size: 1.2em;
+    
+}
