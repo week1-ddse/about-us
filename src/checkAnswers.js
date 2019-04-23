@@ -27,6 +27,6 @@ function checkAnswers(dannySAnswer, dannyHAnswer, susanAnswer, eliAnswer, teamAc
 
     return score;
 
-};
+}
 
 export default checkAnswers;
