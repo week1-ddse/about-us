@@ -8,7 +8,8 @@ const teamAcronymInput = document.getElementById('team-acronym');
 const result = document.getElementById('quiz-results');
 const button = document.getElementById('submit');
 
-button.addEventListener('click', asset => {
+button.addEventListener('click', event => {
+    event.preventDefault();
     const dannySAnswer = dannySInput.value.trim();
     const dannyHAnswer = dannyHInput.value.trim();
     const susanAnswer = susanInput.value.trim();
@@ -18,13 +19,11 @@ button.addEventListener('click', asset => {
     const score = checkAnswers(dannySAnswer, dannyHAnswer, susanAnswer, eliAnswer, teamAcronymAnswer);
     
     if(dannySAnswer === '' || dannyHAnswer === '' || susanAnswer === '' || eliAnswer === '' || teamAcronymAnswer === '') {
-        alert('You did not fill in everything!!!')
-    };
+        alert('You did not fill in everything!!!');
+    }
 
-    const message = "Your score: " + score + " out of 5!";
+    const message = 'Your score: ' + score + ' out of 5!';
     
     result.textContent = message;
 
 });
-console.log(dannySInput, dannyHInput, susanInput, eliInput, teamAcronymInput, result, button);
-
