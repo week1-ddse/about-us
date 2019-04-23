@@ -1,25 +1,27 @@
 function checkAnswers(dannySAnswer, dannyHAnswer, susanAnswer, eliAnswer, teamAcronymAnswer) {
     let score = 0;
 
-    if(dannySAnswer === 'canby') {
+    
+
+    if(dannySAnswer.toLowerCase() === 'canby') {
         score += 1;
     }
     
-    if(dannyHAnswer === 'portland') {
+    if(dannyHAnswer.toLowerCase() === 'portland') {
         score += 1;
-    } else if(dannyHAnswer === 'pdx') {
+    } else if(dannyHAnswer.toLowerCase() === 'pdx') {
         score += 2;
     }
     
-    if(susanAnswer === 'eugene') {
+    if(susanAnswer.toLowerCase() === 'eugene') {
         score += 1;
     }
 
-    if(eliAnswer === 'redmond') {
+    if(eliAnswer.toLowerCase() === 'redmond') {
         score += 1;
     }
 
-    if(teamAcronymAnswer === 'ddse') {
+    if(teamAcronymAnswer.toLowerCase() === 'ddse') {
         score += 1;
     }
 

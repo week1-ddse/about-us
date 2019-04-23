@@ -15,11 +15,15 @@ button.addEventListener('click', asset => {
     const eliAnswer = eliInput.value.trim();
     const teamAcronymAnswer = teamAcronymInput.value.trim();
 
-    const clicked = checkAnswers(dannySAnswer, dannyHAnswer, susanAnswer, eliAnswer, teamAcronymAnswer);
+    const score = checkAnswers(dannySAnswer, dannyHAnswer, susanAnswer, eliAnswer, teamAcronymAnswer);
+    
     if(dannySAnswer === '' || dannyHAnswer === '' || susanAnswer === '' || eliAnswer === '' || teamAcronymAnswer === '') {
-        alert('You did not fill in everything!!!');
-    }
-    console.log(clicked);
+        alert('You did not fill in everything!!!')
+    };
+
+    const message = "Your score: " + score + " out of 5!";
+    
+    result.textContent = message;
 
 });
 console.log(dannySInput, dannyHInput, susanInput, eliInput, teamAcronymInput, result, button);
