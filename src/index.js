@@ -1,3 +1,5 @@
+import checkAnswers from './checkAnswers.js';
+
 const dannySInput = document.getElementById('dannys-from');
 const dannyHInput = document.getElementById('dannyh-from');
 const susanInput = document.getElementById('susan-from');
@@ -7,13 +9,17 @@ const result = document.getElementById('quiz-results');
 const button = document.getElementById('submit');
 
 button.addEventListener('click', asset => {
-    const dannySAnswer = dannySInput.value;
-    const dannyHAnswer = dannyHInput.value;
-    const susanAnswer = susanInput.value;
-    const eliAnswer = eliInput.value;
-    const teamAcronymAnswer = teamAcronymInput.value;
+    const dannySAnswer = dannySInput.value.trim();
+    const dannyHAnswer = dannyHInput.value.trim();
+    const susanAnswer = susanInput.value.trim();
+    const eliAnswer = eliInput.value.trim();
+    const teamAcronymAnswer = teamAcronymInput.value.trim();
 
-    console.log(dannySAnswer);
+    const clicked = checkAnswers(dannySAnswer, dannyHAnswer, susanAnswer, eliAnswer, teamAcronymAnswer);
+    if(dannySAnswer === '' || dannyHAnswer === '' || susanAnswer === '' || eliAnswer === '' || teamAcronymAnswer === '') {
+        alert('You did not fill in everything!!!');
+    }
+    console.log(clicked);
 
 });
 console.log(dannySInput, dannyHInput, susanInput, eliInput, teamAcronymInput, result, button);
