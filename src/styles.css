@@ -8,9 +8,9 @@ body {
 }
 
 h1, h2 {
-   font-family: 'Oswald', serif;
-   color: #004700;
-}
+    font-family: 'Oswald', serif;
+    color: #004700;
+ }
 
 h1 {
     text-align: center;
@@ -40,4 +40,21 @@ li {
 
 img {
     width: 622px;
+}
+
+label {
+    display: block;
+    font-size: 1.2em;
+}
+
+input {
+    margin-bottom: 15px;
+    height: 20px;
+    width: 200px;
+}
+
+button {
+    display: block;
+    font-size: 1.2em;
+    
 }
